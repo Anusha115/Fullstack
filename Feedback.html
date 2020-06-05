@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedbackform</title>
+        <script>
+            function feed(){
+                var name=document.getElementById("t1").value;
+                var phone=document.getElementById("t6").value;
+                var email=document.getElementById("t2").value;
+                var username=document.getElementById("t3").value;
+                var feedback=document.getElementById("t7").value;
+                var letters=/^[A-Za-z]+$/;
+                var pwd_expression=/^(?=.*?[a-z])(?=.*?[0-9])(?=.*?!@$%&^*-])/;
+                var email=/^[A-Za-z][a-zA-Z0-9._-]{3,20}[@]{4,12}[.][a-z]{2,3}$/;
+                var username=/^[A-Z][a-zA-Z0-9]+$/;
+                var phonenumber=/^[6-9][0-9]{9}$/;
+                if(name=='')
+                {
+                    window.alert('please enter your name');
+                }
+                else if(!letters.test(name))
+                {
+                    window.alert('name field require only alphabet characters');
+                }
+                else if(fed=='')
+                {
+                    window.alert('enter feedback');
+                }
+                else if(email=='')
+                {
+                    window.alert('enter your emailid');
+                }
+                else if(phonrnumber=='')
+                {
+                    alert('please enter phonenumber');
+                }
+                elseif(!phonenumber.test(phonenumber))
+                {
+                    window.alert('not a valid phone number');
+                }
+                elseif(!email.test(email))
+                {
+                    window.alert('invalid emailaddress');
+                }
+                elseif(document.getElementById("t3").value.length<4)
+                {
+                    window.alert('username minimum length is 4');
+                }
+                elseif(document.getElementById("t3").value.length>8)
+                {
+                    window.alert('username maximum length is 8');
+                }
+                elseif{
+                    window.alert('Feedback successful');
+                }
+            }
+        </script>
+        <style>
+            .a1{
+                font-size: 1cm;
+                font-weight: bolder;
+                color:blue;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body background-color="lightblue">
+        <a href="Home.html">Home</a>
+        <h1 class="a1">Feedback form</h1>
+        <table cellspacing="2"text-align="center"cellpadding="8">
+            <tr>
+                <td text-align="right">Entername:</td>
+                <td><input type="text"placeholder="enter name here"id="t1"/></td>
+            </tr>
+            <tr>
+                <td text-align="right">enter phone number:</td>
+                <td>input type="number"placeholder="enter phone number"id="t6"/></td>
+            </tr>
+            <tr>
+                <td text-align="right">enter phone number:</td>
+                <td>input type="text"placeholder="enter emailid "id="t2"/></td>
+            </tr>
+            <tr>
+                <td text-align="right">enter phone number:</td>
+                <td>input type="text"placeholder="enter username"id="t3"/></td>
+            </tr>
+            <tr>
+                <td text-align="right">enter phone number:</td>
+                <td>input type="text"placeholder="enter feedback here"id="t7"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="reset"value="clear form"id="reset"/>
+                    <input type="submit"value="submit Feedback"onclick="feed()"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
